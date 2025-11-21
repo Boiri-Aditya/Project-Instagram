@@ -256,3 +256,10 @@ body {
     color: #ccc;
     cursor: pointer;
 }
+
+.badge-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
