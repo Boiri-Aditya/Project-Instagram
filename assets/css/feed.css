@@ -393,6 +393,19 @@ body {
     .nav-item span {
         display: none;
     }
+    .feed-container {
+        max-width: 90%;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .feed-container {
+        max-width: 100%;
+    }
+    .feed-post {
+        border-radius: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -400,11 +413,32 @@ body {
         width: 100%;
         position: fixed;
         bottom: 0;
+        top: auto;
         border-top: 1px solid #1f1f1f;
         height: auto;
+        padding: 10px;
     }
     .nav {
         flex-direction: row;
         justify-content: space-around;
+    }
+    .container {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    .feed-container {
+        margin-top: 20px;
+        padding-bottom: 80px;
+    }
+    .post-actions {
+        padding: 12px;
+    }
+    .post-header {
+        padding: 10px 12px;
+    }
+    .caption,
+    .comment,
+    .view-comments {
+        font-size: 12px;
     }
 }
