@@ -51,8 +51,9 @@ body {
 }
 
 .logo h1 {
-    font-size: 24px;
-    font-weight: 700;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    font-weight: bold;
     background: linear-gradient(45deg, #FF0033, #FE5A1D, #FFEF18, #00FF3C, #18F2FF);
     background-clip: text;
     color: transparent;
