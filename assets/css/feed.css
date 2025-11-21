@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    color: #18F2FF;
+}
+
+.icon-text {
+    font-size: 24px;
+    line-height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #18F2FF;
+}
+
+.sidebar-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 245px;
+    height: 100vh;
+    background-color: #131313;
+    border-right: 1px solid #1f1f1f;
+    padding: 32px 12px 24px 12px;
+    z-index: 100;
+}
+
+.logo {
+    padding: 0 12px;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #FF0033, #FE5A1D, #FFEF18, #00FF3C, #18F2FF);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #1f1f1f;
+}
+
+.nav-item.active {
+    color: #FFEF18;
+    font-weight: 700;
+}
+
+.nav-item.active .icon {
+    color: #FFEF18;
+}
+
+.menu-bottom {
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+    right: 12px;
+}
+
+.feed-container {
+    flex: 1;
+    padding: 32px 0;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feed-post {
+    background-color: #131313;
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFEF18;
+}
+
+.more-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    color: #888;
+    transition: 0.2s ease;
+}
+
+.more-btn:hover {
+    color: #18F2FF;
+}
+
+.post-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #0a0a0a;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-actions {
+    padding: 16px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.left-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 24px;
+    color: #18F2FF;
+    transition: 0.2s;
+}
+
+.action-btn:hover {
+    color: #FF0033;
+}
+
+.likes {
+    color: #FFEF18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.caption {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 18px;
+    color: #f5f5f5;
+}
+
+.view-comments {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.view-comments:hover {
+    color: #18F2FF;
+}
+
+.comment {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #f5f5f5;
+}
+
+.time-ago {
+    font-size: 10px;
+    color: #888;
+}
+
+.add-comment {
+    border-top: 1px solid #1f1f1f;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comment-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #f5f5f5;
+    background: none;
+}
+
+.right-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    padding: 32px 24px;
+    overflow-y: auto;
+}
+
+.profile-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.avatar-large {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details .username {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFEF18;
+}
+
+.user-details .name {
+    font-size: 14px;
+    color: #888;
+}
+
+.switch-btn {
+    background: none;
+    border: none;
+    color: #18F2FF;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.switch-btn:hover {
+    color: #FE5A1D;
+}
+
+.suggestions-list {
+    margin-bottom: 32px;
+}
+
+.suggestions-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.suggestions-title {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+}
+
+.see-all-btn {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #18F2FF;
+    cursor: pointer;
+}
+
+.see-all-btn:hover {
+    color: #FE5A1D;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.mutual {
+    font-size: 12px;
+    color: #888;
+}
+
+.follow-btn {
+    background: none;
+    border: none;
+    color: #00FF3C;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.follow-btn:hover {
+    color: #18F2FF;
+}
+
+.footer {
+    font-size: 11px;
+    color: #888;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1264px) {
+    .right-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-left {
+        width: 72px;
+    }
+    .logo {
+        display: none;
+    }
+    .nav-item span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-left {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        border-top: 1px solid #1f1f1f;
+        height: auto;
+    }
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
