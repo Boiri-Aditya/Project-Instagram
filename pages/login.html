@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../assets/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body onload="checkInputs()">
+
     <div class="container">
         <div class="main-wrapper">
             
@@ -23,29 +25,46 @@
                 
                 <!-- Login Card -->
                 <div class="login-card">
+
                     <!-- Logo -->
                     <div class="logo">
                         <h1>Togetherly</h1>
                     </div>
 
                     <!-- Login Form -->
-                    <form class="login-form">
+                    <form class="login-form" action="feed.html" method="get">
+
                         <input 
-                            type="text" 
-                            placeholder="Username or Email" 
+                            type="text"
+                            id="username"
+                            placeholder="Username or Email"
                             class="input-field"
                             aria-label="Username or Email"
+                            oninput="checkInputs()"
                         >
-                        <input 
-                            type="password" 
-                            placeholder="Password" 
-                            class="input-field"
-                            aria-label="Password"
-                        >
-                        
-                        <button type="submit" class="login-button">
+
+                        <div style="width:100%; position:relative;">
+                            <input 
+                                type="password"
+                                id="password"
+                                placeholder="Password"
+                                class="input-field"
+                                aria-label="Password"
+                                oninput="checkInputs()"
+                                style="width:100%;"
+                            >
+                            <span 
+                                onclick="togglePassword()" 
+                                style="position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:12px; color:#aaa;"
+                            >
+                                Show
+                            </span>
+                        </div>
+
+                        <button type="submit" id="login-btn" class="login-button" disabled>
                             Log In
                         </button>
+
                     </form>
 
                     <!-- Divider -->
@@ -60,7 +79,6 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook icon">
                         <a href="#" class="fb-link">Log in with Facebook</a>
                     </div>
-
 
                     <!-- Forgot Password -->
                     <div class="forgot-password">
@@ -105,6 +123,7 @@
             </div>
         </div>
     </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
@@ -132,5 +151,7 @@
             <span>© 2025 Togetherly</span>
         </div>
     </footer>
+    <script src="../assets/javascript/login.js"></script>
+
 </body>
 </html>

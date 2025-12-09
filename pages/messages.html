@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Togetherly</title>
+    <link rel="stylesheet" href="../assets/css/messages.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="messages-popup">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Messages</h2>
+        </div>
+
+        <div class="user-list">
+            <div class="user active" onclick="selectUser(this)">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150">
+                <div>
+                    <div class="name">sarah_johnson</div>
+                    <div class="preview">That sounds amazing!</div>
+                </div>
+            </div>
+
+            <div class="user" onclick="selectUser(this)">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150">
+                <div>
+                    <div class="name">alex_fitness</div>
+                    <div class="preview">Morning workout 💪</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="chat">
+        <div class="chat-header">
+            <span id="chatName">sarah_johnson</span>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div class="bubble received">Hey! How are you?</div>
+            <div class="bubble sent">I’m good! What about you?</div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+</div>
+
+<script src="../assets/javascript/messages.js"></script>
+</body>
+</html>
