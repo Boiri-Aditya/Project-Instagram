@@ -1,6 +1,11 @@
 function togglePassword() {
     const pass = document.getElementById("password");
-    pass.type = pass.type === "password" ? "text" : "password";
+
+    if (pass.type === "password") {
+        pass.type = "text";
+    } else {
+        pass.type = "password";
+    }
 }
 
 function checkInputs() {
